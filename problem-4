@@ -1,0 +1,34 @@
+#include<stdio.h>
+int sumarray (int *array,int rows,int cols)
+{
+    int sum=0;
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<cols;j++)
+        {
+            sum=sum+ *(array+i*cols+j);
+        }
+    }
+    return sum;
+}
+
+int main()
+{
+    int rows,cols;
+    printf("enter the rows and cols");
+    scanf("%d %d",&rows,&cols);
+    
+    int array[rows][cols];
+    printf("enter the element of the array:\n");
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<cols;j++)
+        {
+            scanf("%d",&array[i][j]);
+        }
+    }
+    
+    int sum=sumarray((int *)array,rows,cols);
+    printf("sum of aray elements %d\n",sum);
+    return 0;
+}
