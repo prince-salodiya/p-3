@@ -1,0 +1,29 @@
+#include<stdio.h>
+int conact(char *fs,char *ls)
+{
+    while(*fs)
+    {
+        fs++;
+    }
+    while(*ls)
+    {
+        *fs=*ls;
+        fs++;
+        ls++;
+    }
+    *fs='\0';
+}
+
+int main()
+{
+ char str1[100],str2[100];
+ printf("enter the first string: ");
+ scanf("%s",str1);
+ printf("enter the second string: ");
+ scanf("%s",str2);
+ 
+ conact(str1,str2);
+ 
+ printf("connect string:%s",str1);
+ return 0;
+}
