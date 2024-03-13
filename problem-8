@@ -1,0 +1,25 @@
+#include<stdio.h>
+int copy(char *fs,char*ns)
+{
+    while(*ns)
+    {
+        *fs=*ns;
+        fs++;
+        ns++;
+    }
+    *fs='\0';
+}
+
+int main()
+{
+    char ns[100],fs[100];
+    
+    printf("enter the first string");
+    scanf("%s",ns);
+    
+    copy(fs,ns);
+
+printf("str2 string %s",fs);
+
+return 0;
+}
